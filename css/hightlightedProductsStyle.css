@@ -42,7 +42,7 @@
 }
   
 .product-description p {
-    color: #b9b9b9;
+    color: #bbbbbb;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -84,13 +84,13 @@
 }
   
 .next {
-    right: -47px;
+    right: -46px;
     border-radius: 0 20px 20px 0;
     background-color: rgba(15, 204, 216, 0.8);
 }
   
 .prev {
-    left: -47px;
+    left: -46px;
     border-radius: 20px 0 0 20px;
     background-color: rgba(221, 63, 63, 0.8);
 }

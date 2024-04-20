@@ -21,9 +21,7 @@ if (searchArtist) {
   })
 }
 
-function togglePopup(){
-  document.getElementById("popup-1").classList.toggle("active");
-}
+
 
 function togglePopup(number){
   if (number==1){
@@ -36,15 +34,15 @@ function togglePopup(number){
 
 function tryy(){
   const popup = document.getElementById("popup-1");
-const popupBtn = document.querySelector('#account-button');
-popupBtn.addEventListener('click', ()=> {
-  popup.classList.toggle("active");
-})
-document.addEventListener('click', e => {
-  if(popup.contains(e.target)!= e.target!== popupBtn){
-    popup.classList.delete('active');
-  }
-})
+  const popupBtn = document.querySelector('#account-button');
+  popupBtn.addEventListener('click', ()=> {
+    popup.classList.toggle("active");
+  })
+  document.addEventListener('click', e => {
+    if(popup.contains(e.target)!= e.target!== popupBtn){
+      popup.classList.delete('active');
+    }
+  })
 }
 
 window.addEventListener("scroll", function() {
