@@ -24,7 +24,6 @@ CREATE TABLE Products (
    Name NVARCHAR(160) NOT NULL,
    Company NVARCHAR(120),
    LaunchYear INTEGER NOT NULL,
-   UnitPrice INTEGER NOT NULL,
    CONSTRAINT PK_Products PRIMARY KEY (ProductId)
 );
 
@@ -62,12 +61,30 @@ CREATE TABLE Users (
 
 CREATE TABLE Images (
    ImageId INTEGER PRIMARY KEY,
-   ProductId INTEGER,
    ImageURL NVARCHAR(255) NOT NULL, -- URL to access the image
-   FOREIGN KEY (ProductId) REFERENCES Products (ProductId)
 );
 
 
+CREATE TABLE UserProduct (
+   ProductId INTEGER NOT NULL,
+   UserId INTEGER NOT NULL,
+   UnitPrice NUMERIC(10,2),
+   DESCRIPTION NVARCHAR(1000),
+   PRIMARY KEY (ProductId, UserId),
+   FOREIGN KEY (ProductId) REFERENCES Products (ProductId),
+   FOREIGN KEY (UserId) REFERENCES Users (UserId)
+);
+
+
+CREATE TABLE UserProductImage (
+   ProductId INTEGER NOT NULL,
+   UserId INTEGER NOT NULL,
+   ImageId INTEGER NOT NULL,
+   PRIMARY KEY (ProductId, UserId),
+   FOREIGN KEY (ProductId) REFERENCES Products (ProductId),
+   FOREIGN KEY (UserId) REFERENCES Users (UserId),
+   FOREIGN KEY (ImageId) REFERENCES Images (ImageId)
+);
 
 
 /*******************************************************************************

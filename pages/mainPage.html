@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MainPage</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../javascript/script.js"></script>
 </head>
 <body>
     <header>
@@ -20,10 +21,46 @@
         <div class="header-buttons">
             <button class="sell-button">Sell</button>
             <button class="message-button"><img src="../docs/icons/messages.png" alt="Messages"></button>
-            <button class="account-button"><img src="../docs/icons/account.webp" alt="My Account"></button>
+            <button onclick="togglePopup()" class="account-button"><img src="../docs/icons/account.webp" alt="My Account"></button>
+            <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                    <div class="content1">
+                        <div class="popupbtn">Login</div>
+                        <div class="popupbtn">Register</div>
+                        <div class="closebtn" onclick="togglePopup()">&times;</div>
+                        <div class="writes">
+                            <h1>My account</h1>
+                            <div class="myaccountbtn">My account</div>
+                            <div class="wishlistbtn">Wish list</div>
+                            <h1>Sell</h1>
+                            <div class="yourproductsbtn">Your products</div>
+                        </div>
+                    </div>
+            </div>
         </div>
     </header>
-    
+    <div class="content">
+        <div class="menu-buttons">
+            <button class="menu-button"><img src="../docs/icons/menu.png" alt="Menu"></button>
+            <button class="consoles-button">Consoles</button>
+            <button class="playstation-button">PlayStation</button>
+            <button class="xbox-button">XBox</button>
+            <button class="pc-button">PC</button>
+        </div>
+        
+        <div class="highlighted-products">
+            <div class="logo-eyes">
+                <img src="../docs/logo-eyes.png">
+            </div>
+            <img src="https://gaming-cdn.com/images/products/14986/orig/minecraft-java-bedrock-edition-deluxe-collection-deluxe-collection-pc-jogo-microsoft-store-europe-cover.jpg?v=1696925849" class="product-image">
+            <div class="product-description">
+                <h1>Minecraft</h1>
+                <p>"Minecraft is a game made up of blocks, creatures, and community. You can survive the night or build a work of art – the choice is all yours. But if the thought of exploring a vast new world all on your own feels overwhelming, then fear not! Let's explore what Minecraft is all about!" - Minecraft.</p>
+                <a href="https://www.minecraft.net/">Visit the official site.</a>
+                <button>Enter</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
