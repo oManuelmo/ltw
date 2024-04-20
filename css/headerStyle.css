@@ -1,0 +1,85 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+.logo {
+    width: 100%; 
+}
+
+header .search-form {
+    flex: 1; 
+    margin: 0 5% 0 5%;
+}
+
+header .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+  
+header .search-container input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    outline: none;
+}
+  
+header .search-form input[type="text"]:focus {
+    /*
+    POR FAZER
+    QUERO METER COR AO CLICAR PARA ESCREVER
+    */
+}
+
+
+header .search-container button[type="submit"] {
+    position: absolute;
+    right: 0;
+    padding: 10px 20px;
+    height: 100%;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .search-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.sell-button {
+    padding: 12px 24px;
+    background-color: #0FCCD8;
+    border: 2px solid #0FCCD8;
+    border-radius: 40px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sell-button:hover {
+    background-color: #086C72;
+}
+
+.message-button,
+.account-button {
+    padding: 8px 16px;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.message-button img,
+.account-button img {
+    width: 24px;
+}

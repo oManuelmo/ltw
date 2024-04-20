@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MainPage</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/headerStyle.css">
+    <link rel="stylesheet" href="../css/menuBarStyle.css">
+    <link rel="stylesheet" href="../css/hightlightedProductsStyle.css">
+    <link rel="stylesheet" href="../css/popupsStyle.css">
     <script src="../javascript/script.js"></script>
 </head>
 <body>
@@ -41,23 +45,77 @@
     </header>
     <div class="content">
         <div class="menu-buttons">
-            <button class="menu-button"><img src="../docs/icons/menu.png" alt="Menu"></button>
+            <button onclick="togglePopup(2)" class="menu-button"><img src="../docs/icons/menu.png" alt="Menu"></button>
+            <div class="popup" id="popup-2">
+                <div class="overlay"></div>
+                    <div class="content1">
+                        <div class="popupbtn">My account</div>
+                        <div class="closebtn" onclick="togglePopup(2)">&times;</div>
+                        <div class="writes">
+                            <h1>Buy</h1>
+                            <div class="myaccountbtn">Games</div>
+                            <div class="wishlistbtn">Consoles</div>
+                            <h1>Sell</h1>
+                            <div class="yourproductsbtn" id="separate">Sell your game or console</div>
+                            <div class="yourproductsbtn">Support</div>
+                            <div class="yourproductsbtn">About us</div>
+                            <div class="yourproductsbtn">FAQ</div>
+                            <div class="yourproductsbtn">Terms & Conditions</div>
+                        </div>
+                    </div>
+            </div>
             <button class="consoles-button">Consoles</button>
             <button class="playstation-button">PlayStation</button>
             <button class="xbox-button">XBox</button>
             <button class="pc-button">PC</button>
         </div>
-        
-        <div class="highlighted-products">
-            <img src="https://gaming-cdn.com/images/products/14986/orig/minecraft-java-bedrock-edition-deluxe-collection-deluxe-collection-pc-jogo-microsoft-store-europe-cover.jpg?v=1696925849" class="product-image">
-            <div class="product-description">
-                <h1>Minecraft</h1>
-                <p>"Minecraft is a game made up of blocks, creatures, and community. You can survive the night or build a work of art – the choice is all yours. But if the thought of exploring a vast new world all on your own feels overwhelming, then fear not! Let's explore what Minecraft is all about!" - Minecraft.</p>
-                <a href="https://www.minecraft.net/">Visit the official site.</a>
-                <button>Enter</button>
+        <div class="slideshow-container">
+
+            <div class="highlighted-product">
+                <img src="https://gaming-cdn.com/images/products/14986/orig/minecraft-java-bedrock-edition-deluxe-collection-deluxe-collection-pc-jogo-microsoft-store-europe-cover.jpg?v=1696925849" class="product-image">
+                <div class="product-description">
+                    <h1>Minecraft</h1>
+                    <p>"Minecraft is a game made up of blocks, creatures, and community. You can survive the night or build a work of art – the choice is all yours. But if the thought of exploring a vast new world all on your own feels overwhelming, then fear not! Let's explore what Minecraft is all about!" - Minecraft.</p>
+                    <a href="https://www.minecraft.net/">Visit the official site.</a>
+                    <button>Enter</button>
+                </div>
+            </div>
+            <div class="highlighted-product">
+                <img src="https://i5.walmartimages.com/seo/Sony-PlayStation-5-Video-Game-Console-Ps5-Disc-Console-New_396aa760-b2f6-4c06-8dc5-276184a85dc6.0d8c80439262394fc4edabb03056daa3.jpeg" class="product-image">
+                <div class="product-description">
+                    <h1>Playstation 5</h1>
+                    <p>Playstation 5</p>
+                    
+                    <button>Enter</button>
+                </div>
+            </div>
+            <div class="highlighted-product">
+                <img src="https://gaming-cdn.com/images/products/14986/orig/minecraft-java-bedrock-edition-deluxe-collection-deluxe-collection-pc-jogo-microsoft-store-europe-cover.jpg?v=1696925849" class="product-image">
+                <div class="product-description">
+                    <h1>Minecraft</h1>
+                    <p>"Minecraft is a game made up of blocks, creatures, and community. You can survive the night or build a work of art – the choice is all yours. But if the thought of exploring a vast new world all on your own feels overwhelming, then fear not! Let's explore what Minecraft is all about!" - Minecraft.</p>
+                    <a href="https://www.minecraft.net/">Visit the official site.</a>
+                    <button>Enter</button>
+                </div>
+            </div>
+            <div class="highlighted-product">
+                <img src="https://gaming-cdn.com/images/products/14986/orig/minecraft-java-bedrock-edition-deluxe-collection-deluxe-collection-pc-jogo-microsoft-store-europe-cover.jpg?v=1696925849" class="product-image">
+                <div class="product-description">
+                    <h1>Minecraft</h1>
+                    <p>"Minecraft is a game made up of blocks, creatures, and community. You can survive the night or build a work of art – the choice is all yours. But if the thought of exploring a vast new world all on your own feels overwhelming, then fear not! Let's explore what Minecraft is all about!" - Minecraft.</p>
+                    <a href="https://www.minecraft.net/">Visit the official site.</a>
+                    <button>Enter</button>
+                </div>
             </div>
         </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
 </body>
 </html>

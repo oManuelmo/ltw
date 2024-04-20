@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.slideshow-container {
+    max-width: 1248px; /* Sum of image and description widths plus some margin */
+    position: relative;
+    margin: auto;
+    transition: transform .2s; /* Smooth transition for sliding effect */
+}
+  
+  /* Styles for each product in the slideshow */
+.highlighted-product {
+    display: none; /* Start with none to hide all, will be controlled by JavaScript */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+  
+  /* Styling for product images */
+.product-image {
+    width: 960px; 
+    height: 540px;
+    display: block; /* Ensure the image does not have any flex properties */
+}
+  
+  /* Product description styling */
+.product-description {
+    font-family: 'DM Sans';
+    height: 540px;
+    overflow: auto;
+    background-color: #222222;
+    color: white;
+    width: 288px; 
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.product-description h1 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+}
+  
+.product-description p {
+    color: #b9b9b9;
+    font-size: 16px;
+    line-height: 1.5;
+}
+  
+.product-description button {
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 87%, 24%, 1);
+    background: linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
+    background: -moz-linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
+    background: -webkit-linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#720808", endColorstr="#086C72", GradientType=1 );
+    border: none;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 60px;
+    border-radius: 30px;
+}
+  
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    margin-top: -300px;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+}
+  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+.highlighted-product:first-of-type {
+    display: flex;
+}
