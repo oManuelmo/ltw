@@ -1,30 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 .slideshow-container {
-    max-width: 1248px; /* Sum of image and description widths plus some margin */
+    max-width: 1248px; 
     position: relative;
     margin: auto;
-    transition: transform .2s; /* Smooth transition for sliding effect */
+    transition: transform .2s; 
 }
   
-  /* Styles for each product in the slideshow */
 .highlighted-product {
-    display: none; /* Start with none to hide all, will be controlled by JavaScript */
-    flex-direction: row; /* Align items horizontally */
+    display: none;
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
     position: relative;
 }
   
-  /* Styling for product images */
 .product-image {
     width: 960px; 
     height: 540px;
-    display: block; /* Ensure the image does not have any flex properties */
+    display: block; 
 }
-  
-  /* Product description styling */
+
 .product-description {
+    z-index: 1;
     font-family: 'DM Sans';
     height: 540px;
     overflow: auto;
@@ -69,33 +67,44 @@
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    margin-top: -300px;
+    top: 50%;
     width: auto;
+    margin-top: -22px;
     padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 28px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    background-color: rgba(0,0,0,0.8);
 }
   
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: -47px;
+    border-radius: 0 20px 20px 0;
+    background-color: rgba(15, 204, 216, 0.8);
 }
   
 .prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
+    left: -47px;
+    border-radius: 20px 0 0 20px;
+    background-color: rgba(221, 63, 63, 0.8);
+}
+
+.next:hover {
+    right: -52px;
+    background-color: rgba(8, 108, 114, 0.8);
+}
+.prev:hover {
+    left: -52px;
+    background-color: rgba(114, 8, 8, 0.8);
 }
   
 .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 2px;
+    margin: 5px 2px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
