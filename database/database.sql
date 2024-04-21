@@ -7,13 +7,15 @@
    Author: Luis Rocha
    License: http://www.codeplex.com/ChinookDatabase/license
 ********************************************************************************/
-
+DROP TABLE IF EXISTS Products;
 DROP TABLE IF EXISTS VideoGames;
 DROP TABLE IF EXISTS Consoles;
 DROP TABLE IF EXISTS Controllers;
 DROP TABLE IF EXISTS Users;
 DROP TABLE IF EXISTS Images;
 DROP TABLE IF EXISTS ProductImage;
+DROP TABLE IF EXISTS UserProduct;
+DROP TABLE IF EXISTS UserProductImage;
 
 /*******************************************************************************
    Create Tables
@@ -60,7 +62,7 @@ CREATE TABLE Users (
 
 CREATE TABLE Images (
    ImageId INTEGER PRIMARY KEY,
-   ImageURL NVARCHAR(255) NOT NULL, -- URL to access the image
+   ImageURL NVARCHAR(255) NOT NULL
 );
 
 
@@ -89,10 +91,15 @@ CREATE TABLE UserProductImage (
 /*******************************************************************************
    Create Foreign Keys
 ********************************************************************************/
-CREATE INDEX IFK_VideoGameConsoleId ON VideoGames (ConsoleId);
 
-CREATE INDEX IFK_ControllerConsoleId ON Controllers (ConsoleId);
 
 /*******************************************************************************
    Populate Tables
 ********************************************************************************/
+INSERT INTO Users (FirstName, LastName, Address, City, Country, PostalCode, Phone, Email, Password)
+VALUES
+('John', 'Doe', '123 Main St', 'Anytown', 'USA', '12345', '123-456-7890', 'john@example.com', 'password123'),
+('Jane', 'Smith', '456 Elm St', 'Otherville', 'Canada', '67890', '987-654-3210', 'jane@example.com', 'securepass'),
+('Alice', 'Johnson', '789 Oak St', 'Sometown', 'UK', '54321', '555-123-4567', 'alice@example.com', 'p@ssw0rd'),
+('Bob', 'Brown', '321 Maple St', 'Anothercity', 'Australia', '13579', '111-222-3333', 'bob@example.com', 'letmein');
+
