@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 body {
-    width: 25%;
+    font-family: 'DM Sans';
+    display: grid;
+    place-items: center; 
+    height: 100vh;
+    margin: 0;
     background-color: #333333;
 }
-
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
     background: hsla(0, 87%, 24%, 1);
     background: linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
     background: -moz-linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
     background: -webkit-linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#720808", endColorstr="#086C72", GradientType=1 );
+    border-radius: 2%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -18,7 +28,54 @@ body {
 }
 
 h1 {
-    font-family: 'DM Sans';
     font-weight: 1000;
-    font-size: 80px;
+    font-size: 26px;
+    color:white;
+}
+
+form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input[type="email"],
+input[type="password"],
+button {
+    height: 30px;
+    padding: 10px;
+    margin: 10px 40px 10px 40px;
+    border: 1px solid #E3E3E3;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+button {
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background-color: #0FCCD8;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6D8C92;
+}
+
+p {
+    text-align: center;
+    margin: 0 30px 20px 30px;
+    color: #D9D9D9;
+}
+
+a {
+    color: #D9D9D9;
+}
+
+a:hover {
+    color: #0FCCD8;
 }
