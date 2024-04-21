@@ -5,13 +5,9 @@
     justify-content: space-between;
   
     background: hsla(0, 87%, 24%, 1);
-  
     background: linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
-    
     background: -moz-linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
-    
     background: -webkit-linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
-    
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#720808", endColorstr="#086C72", GradientType=1 );
 }
   

@@ -50,7 +50,6 @@ CREATE TABLE Users (
    LastName NVARCHAR(20)  NOT NULL,
    Address NVARCHAR(70),
    City NVARCHAR(40),
-   State NVARCHAR(40),
    Country NVARCHAR(40),
    PostalCode NVARCHAR(10),
    Phone NVARCHAR(24),
