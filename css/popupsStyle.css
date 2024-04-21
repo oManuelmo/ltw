@@ -12,7 +12,7 @@
     display: none;
 }
   
-.popup .content1{
+.popup .content1 {
     position: absolute;
     text-align: center;
     right: 0%;
@@ -59,11 +59,11 @@
 }
   
 .popup#popup-1 .content1 .closebtn{
-    left: -15%
+    left: 5%
 }
   
 .popup#popup-2 .content1 .closebtn{
-    right: 2%;
+    right: 5%;
 }
 
 .popup#popup-2 .content1 .popupbtn{
@@ -83,6 +83,29 @@
   
 .popup .popupbtn{
     position: absolute;
+}
+
+.loginbtn{
+    position: absolute;
+    cursor: pointer;
+    top: 9%;
+    background-color: #222222;
+    color: #fff;
+    width: 30%;
+    padding: 5px;
+    border-radius: 8px;
+    left:15.5%;
+}
+.registerbtn{
+    position: absolute;
+    cursor: pointer;
+    top: 9%;
+    background-color: #222222;
+    color: #fff;
+    width: 30%;
+    padding: 5px;
+    border-radius: 8px;
+    left: 50.5%;
 }
   
 .popup.active .overlay{
@@ -118,9 +141,10 @@
     border-top-color: #aaaaaa;
 }
 
-.gamesbtn, .sellyourproductbtn{
+.gamesbtn, .sellyourproductbtn, .myaccountbtn, .yourproductsbtn{
     margin-top: -20px;
 }
+
 
 .separator1 {
     height: 1px;
@@ -143,3 +167,8 @@
   .popup{
     font-family: 'DM Sans';
   }
+
+  .popup#popup-1 .content1{
+    width: 20%;
+    height: 52%;
+}
