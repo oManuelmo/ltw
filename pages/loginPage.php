@@ -10,6 +10,7 @@
     <div class="container">
         <img src="../docs/logo-removebg-preview.png" alt="Maets" class="logo">
         <h1>Login</h1>
+        <p>If you don't have an account register <a href="registerPage.php">here</a></p>
         <form action="login_process.php" method="post"> 
             <input type="email" id="email" name="email" required placeholder="E-mail adress">
             <input type="password" id="password" name="password" required placeholder="Password">
