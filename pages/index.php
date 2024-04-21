@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <a href="mainPage.html">
+        <a href="index.php">
             <img src="../docs/logo.png" alt="Normal logo" width="100">
         </a>
         <form action="/search" method="get" class="search-form">
@@ -33,7 +33,9 @@
                     <form action="pages/loginPage.php">
                         <button class="loginbtn">Login</button>
                     </form>
-                    <div class="registerbtn">Register</div>
+                    <form action="pages/registerPage.php">
+                        <button class="registerbtn">Register</button>
+                    </form>
                     <div class="closebtn" onclick="togglePopup(1)">&times;</div>
                     <div class="writes">
                         <h1>My account</h1>

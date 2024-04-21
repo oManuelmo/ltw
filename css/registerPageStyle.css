@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body {
+    font-family: 'DM Sans';
+    display: grid;
+    place-items: center; 
+    height: 100vh;
+    margin: 0;
+    background-color: #333333;
+    padding-bottom: 275px;
+}
+.container {
+    margin: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background: hsla(0, 87%, 24%, 1);
+    background: linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
+    background: -moz-linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
+    background: -webkit-linear-gradient(0deg, hsla(0, 87%, 24%, 1) 0%, hsla(183, 87%, 24%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#720808", endColorstr="#086C72", GradientType=1 );
+    border-radius: 2%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 200px;
+}
+
+h1 {
+    font-weight: 1000;
+    font-size: 26px;
+    color:white;
+}
+#firstName {grid-area: firstName;}
+#lastName {grid-area: lastName;}
+#email {grid-area: email;}
+#password {grid-area: password;}
+#address {grid-area: address;}
+#city {grid-area: city;}
+#country {grid-area: country;}
+#postalcode {grid-area: postalcode;}
+#phone {grid-area: phone;}
+#confirmpassword {grid-area: confirmpassword}
+button {grid-area:button}
+
+form {
+    margin-top: 10px;
+    display: grid;
+    grid-template-areas:
+        'firstName lastName'
+        'email email'
+        'address address'
+        'country city'
+        'postalcode phone'
+        'password password'
+        'confirmpassword confirmpassword'
+        'button button';
+    width: 100%;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+button {
+    height: 30px;
+    padding: 10px;
+    margin: 10px 40px 10px 40px;
+    border: 1px solid #E3E3E3;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+#firstName,
+#country,
+#postalcode {
+    margin-right: 10px;
+}
+
+#lastName,
+#city,
+#phone {
+    margin-left: 10px;
+}
+
+button {
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background-color: #0FCCD8;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6D8C92;
+}
+
+p {
+    text-align: center;
+    margin: 0 30px 20px 30px;
+    color: #D9D9D9;
+}
+
+a {
+    color: #D9D9D9;
+}
+
+a:hover {
+    color: #0FCCD8;
+}
