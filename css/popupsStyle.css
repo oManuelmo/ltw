@@ -31,7 +31,7 @@
 .popup#popup-2 .content1{
     left: 0%;
     width: 20%;
-    height: 38em;
+    height: 75.7%;
     margin-top: 2.3em;
 }
 .popup#popup-2 .content1 .writes{
@@ -44,7 +44,7 @@
     margin: auto;
     margin-top: 30%;
     width: 80%;
-    height: 25.8em;
+    height: 67%;
     text-align: left;
     border-radius: 8px;
     line-height: 2;
@@ -170,8 +170,8 @@
 
   .popup#popup-1 .content1{
     width: 20%;
-    height: 25em;
+    height: 50%;
 }
 .popup#popup-1 .content1 .writes{
-    height: 16.8em;
+    height: 68%;
 }
